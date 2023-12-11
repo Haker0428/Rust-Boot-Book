@@ -1,0 +1,7 @@
+[build]
+target = "aarch64-unknown-none"
+
+[target.aarch64-unknown-none]
+rustflags = [
+    "-Clink-arg=-Tboard/raspberry_pi4_linker.ld", "-Cforce-frame-pointers=yes", "-g"
+]
