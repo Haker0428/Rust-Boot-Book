@@ -1,0 +1,16 @@
+[package]
+name = "hello_world_uart"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[build]
+target = "aarch64-unknown-none"
+
+[target.aarch64-unknown-none]
+rustflags = [
+    "-Clink-arg=-Tboard/raspberry_pi4_linker.ld", "-Cforce-frame-pointers=yes"
+]
